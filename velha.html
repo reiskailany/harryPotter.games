@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(4, 4, 93);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .pg {
+            flex: 1;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        body {
+            background-image: url(imagens/fundo1.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h3 {
+            color: #FFFFFF;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin: 0px auto;
+            width: 50%;
+            height: 220px;
+            background-color: rgb(193, 193, 193);
+
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(4, 4, 93);
+            width: 200px;
+            height: 200px;
+            margin: 50px 5px;
+            border-radius: 20px;
+        }
+        
+        .aab {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+            width: 50%;
+            height: 50px;
+            background-color: rgb(4, 4, 93);
+            border-radius: 30px;
+        }
+
+        .bt_box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(193, 193, 193);
+            width: 50%;
+            height: 50px;
+            margin: 5px auto;
+            border-radius: 30px;
+
+
+        }
+
+        .bt {
+            border-radius: 60px;
+            background-color: rgb(4, 4, 93);
+            color: #FFFFFF;
+            width: 50px;
+        }
+
+        .classe1 {
+            background-image: url('imagens/harry.jpg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+        }
+
+        .classe2 {
+            background-image: url('imagens/ginny.jpg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+        }
+
+        .classe3 {
+            background-image: url('imagens/hermione.jpg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+        }
+
+        .classe4 {
+            background-image: url('imagens/ronny.jpg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+        }
+
+        .classe5 {
+            background-image: url('imagens/dumbledore.jpg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+        }
+        footer{
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+            background-color: rgb(4, 4, 93);
+        }
+        footer p{
+            color: #FFFFFF;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <main class="menu">
+            <div class="pg">
+                <h3 onclick="cacaNiquel()">Caça Niquel das Casas</h3>
+            </div>
+            <div class="pg">
+                <h3 onclick="dados()">Dados do Pomo de Ouro</h3>
+            </div>
+            <div class="pg">
+                <h3 onclick="velha()">Velhas Bruxas</h3>
+            </div>
+            <div class="pg">
+                <h3 onclick="menu()">Menu</h3>
+            </div>
+        </main>
+    </div>
+
+    <div class="container" style="border-radius: 20px 20px 0px 0px;">
+        <div class="box" id="div1"></div>
+        <div class="box" id="div2"></div>
+        <div class="box" id="div3"></div>
+    </div>
+    <div class="container" style="border-radius: 0px 0px 0px 0px;">
+        <div class="box" id="div4"></div>
+        <div class="box" id="div5"></div>
+        <div class="box" id="div6"></div>
+    </div>
+    <div class="container" style="border-radius: 0px 0px 20px 20px;">
+        <div class="box" id="div7"></div>
+        <div class="box" id="div8"></div>
+        <div class="box" id="div9"></div>
+    </div>
+    <div class="bt_box">
+        <button class="bt" onclick="rodarVelha()">jogar</button>
+    </div>
+    <div class="aab">
+        <h3 id="casa_hog"></h3>
+    </div>
+    <footer>
+        <p>&copy; Feito por kailany dos reis</p>
+    </footer>
+    <script>
+        function cacaNiquel() {
+            window.location.href = "index.html";
+        }
+        function dados() {
+            window.location.href = "dado.html";
+        }
+        function velha() {
+            window.location.href = "velha.html";
+        }
+        function menu() {
+            window.location.href = "menuPrincipal.html";
+        }
+
+        function rodarVelha() {
+            var valor = Math.floor((Math.random() * 5) + 1);
+            var foto = document.getElementById('div1')
+            if (valor == 1) {
+                foto.className = 'classe1'
+            }
+            if (valor == 2) {
+                foto.className = 'classe2'
+            }
+            if (valor == 3) {
+                foto.className = 'classe3'
+            }
+            if (valor == 4) {
+                foto.className = 'classe4'
+            }
+            if (valor == 5) {
+                foto.className = 'classe5'
+            }
+
+            var valor2 = Math.floor((Math.random() * 5) + 1);
+            var foto2 = document.getElementById('div2')
+            if (valor2 == 1) {
+                foto2.className = 'classe1'
+            }
+            if (valor2 == 2) {
+                foto2.className = 'classe2'
+            }
+            if (valor2 == 3) {
+                foto2.className = 'classe3'
+            }
+            if (valor2 == 4) {
+                foto2.className = 'classe4'
+            }
+            if (valor2 == 5) {
+                foto2.className = 'classe5'
+            }
+
+            var valor3 = Math.floor((Math.random() * 5) + 1);
+            var foto3 = document.getElementById('div3')
+            if (valor3 == 1) {
+                foto3.className = 'classe1'
+            }
+            if (valor3 == 2) {
+                foto3.className = 'classe2'
+            }
+            if (valor3 == 3) {
+                foto3.className = 'classe3'
+            }
+            if (valor3 == 4) {
+                foto3.className = 'classe4'
+            }
+            if (valor3 == 5) {
+                foto3.className = 'classe5'
+            }
+
+            var valor4 = Math.floor((Math.random() * 5) + 1);
+            var foto4 = document.getElementById('div4')
+            if (valor4 == 1) {
+                foto4.className = 'classe1'
+            }
+            if (valor4 == 2) {
+                foto4.className = 'classe2'
+            }
+            if (valor4 == 3) {
+                foto4.className = 'classe3'
+            }
+            if (valor4 == 4) {
+                foto4.className = 'classe4'
+            }
+            if (valor4 == 5) {
+                foto4.className = 'classe5'
+            }
+
+            var valor5 = Math.floor((Math.random() * 5) + 1);
+            var foto5 = document.getElementById('div5')
+            if (valor5 == 1) {
+                foto5.className = 'classe1'
+            }
+            if (valor5 == 2) {
+                foto5.className = 'classe2'
+            }
+            if (valor5 == 3) {
+                foto5.className = 'classe3'
+            }
+            if (valor5 == 4) {
+                foto5.className = 'classe4'
+            }
+            if (valor5 == 5) {
+                foto5.className = 'classe5'
+            }
+
+            var valor6 = Math.floor((Math.random() * 5) + 1);
+            var foto6 = document.getElementById('div6')
+            if (valor6 == 1) {
+                foto6.className = 'classe1'
+            }
+            if (valor6 == 2) {
+                foto6.className = 'classe2'
+            }
+            if (valor6 == 3) {
+                foto6.className = 'classe3'
+            }
+            if (valor6 == 4) {
+                foto6.className = 'classe4'
+            }
+            if (valor6 == 5) {
+                foto6.className = 'classe5'
+            }
+
+            var valor7 = Math.floor((Math.random() * 5) + 1);
+            var foto7 = document.getElementById('div7')
+            if (valor7 == 1) {
+                foto7.className = 'classe1'
+            }
+            if (valor7 == 2) {
+                foto7.className = 'classe2'
+            }
+            if (valor7 == 3) {
+                foto7.className = 'classe3'
+            }
+            if (valor7 == 4) {
+                foto7.className = 'classe4'
+            }
+            if (valor7 == 5) {
+                foto7.className = 'classe5'
+            }
+
+            var valor8 = Math.floor((Math.random() * 5) + 1);
+            var foto8 = document.getElementById('div8')
+            if (valor8 == 1) {
+                foto8.className = 'classe1'
+            }
+            if (valor8 == 2) {
+                foto8.className = 'classe2'
+            }
+            if (valor8 == 3) {
+                foto8.className = 'classe3'
+            }
+            if (valor8 == 4) {
+                foto8.className = 'classe4'
+            }
+            if (valor8 == 5) {
+                foto8.className = 'classe5'
+            }
+            var valor9 = Math.floor((Math.random() * 5) + 1);
+            var foto9 = document.getElementById('div9')
+            if (valor9 == 1) {
+                foto9.className = 'classe1'
+            }
+            if (valor9 == 2) {
+                foto9.className = 'classe2'
+            }
+            if (valor9 == 3) {
+                foto9.className = 'classe3'
+            }
+            if (valor9 == 4) {
+                foto9.className = 'classe4'
+            }
+            if (valor9 == 5) {
+                foto9.className = 'classe5'
+            }
+
+            document.getElementById('casa_hog').innerHTML = " "
+            console.log('valor: ', valor)
+            console.log('valor2: ', valor2)
+            console.log('valor3: ',valor3)
+            console.log('valor4: ',valor4)
+            console.log('valor5: ',valor5)
+            console.log('valor6: ',valor6)
+            console.log('valor7: ',valor7)
+            console.log('valor8: ',valor8)
+            console.log('valor9: ',valor9)
+            console.log('')
+
+            if(valor==valor2 && valor2==valor3){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console('A')
+            }
+            if(valor3==valor6 && valor6==valor9){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('B')
+            }
+            if(valor==valor4 && valor4==valor7){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('C')
+            }
+            if(valor2==valor5 && valor5==valor8){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('D')
+            }
+            if(valor4==valor5 && valor5==valor6){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('E')
+            }
+            if(valor7==valor8 && valor8==valor9){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('h')
+            }
+            if(valor==valor5 && valor5==valor9){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('F')
+            }
+            if(valor3==valor5 && valor5==valor7){
+                document.getElementById('casa_hog').innerHTML = "Parabéns"
+                console.log('G')
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

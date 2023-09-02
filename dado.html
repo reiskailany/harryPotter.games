@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        footer{
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+            background-color: rgb(4, 4, 93);
+        }
+        footer p{
+            color: #FFFFFF;
+            text-align: center;
+        }
+        .menu {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(4, 4, 93);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .pg {
+            flex: 1;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin: 0px auto;
+            width: 50%;
+            height: 220px;
+            background-color: rgb(193, 193, 193);
+
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(4, 4, 93);
+            width: 200px;
+            height: 200px;
+            margin: 50px 5px;
+            border-radius: 20px;
+        }
+
+        body {
+            background-image: url(imagens/fundo1.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h3 {
+            color: #FFFFFF;
+        }
+
+        .classe1 {
+            background-image: url('imagens/dado_1.svg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+            
+        }
+
+        .classe2 {
+            background-image: url('imagens/dado_2.svg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+
+        }
+
+        .classe3 {
+            background-image: url('imagens/dado_3.svg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+
+        }
+
+        .classe4 {
+            background-image: url('imagens/dado_4.svg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+
+        }
+
+        .classe5 {
+            background-image: url('imagens/dado_5.svg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+
+        }
+
+        .classe6 {
+            background-image: url('imagens/dado_6.svg');
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 50px 5px;
+
+        }
+
+        .bt {
+            border-radius: 60px;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(4, 4, 93);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <main class="menu">
+            <div class="pg">
+                <h3 onclick="cacaNiquel()">Caça Niquel das Casas</h3>
+            </div>
+            <div class="pg">
+                <h3 onclick="dados()">Dados do Pomo de Ouro</h3>
+            </div>
+            <div class="pg">
+                <h3 onclick="velha()">Velhas Bruxas</h3>
+            </div>
+            <div class="pg">
+                <h3 onclick="menu()">Menu</h3>
+            </div>
+        </main>
+    </div>
+
+    <div class="container" style="border-radius: 20px 20px 0 0;">
+        <div class="box" id="div1"></div>
+        <div class="box" id="div2"></div>
+        <div class="box" id="div3"></div>
+    </div>
+
+    <div class="container" style="border-radius: 0 0 20px 20px;">
+        <button onclick="funcao1()" class="bt">
+            <h3>um dado</h3>
+        </button>
+        <button onclick="funcao2()" class="bt">
+            <h3>dois dados</h3>
+        </button>
+        <button onclick="funcao3()" class="bt">
+            <h3>três dados</h3>
+        </button>
+    </div>
+    <footer>
+        <p>&copy; Feito por kailany dos reis</p>
+    </footer>
+    
+    <script>
+        function cacaNiquel() {
+            window.location.href = "index.html";
+        }
+        function dados() {
+            window.location.href = "dado.html";
+        }
+        function velha() {
+            window.location.href = "velha.html";
+        }
+        function menu() {
+            window.location.href = "menuPrincipal.html";
+        }
+
+        function funcao1() {
+            var valor = Math.floor((Math.random() * 6) + 1);
+            var foto = document.getElementById('div1')
+            if (valor == 1) {
+                foto.className = 'classe1'
+            }
+            if (valor == 2) {
+                foto.className = 'classe2'
+            }
+            if (valor == 3) {
+                foto.className = 'classe3'
+            }
+            if (valor == 4) {
+                foto.className = 'classe4'
+            }
+            if (valor == 5) {
+                foto.className = 'classe5'
+            }
+            if (valor == 6) {
+                foto.className = 'classe6'
+            }
+        }
+
+        function funcao2() {
+            var valor = Math.floor((Math.random() * 6) + 1);
+            var foto = document.getElementById('div1')
+            if (valor == 1) {
+                foto.className = 'classe1'
+            }
+            if (valor == 2) {
+                foto.className = 'classe2'
+            }
+            if (valor == 3) {
+                foto.className = 'classe3'
+            }
+            if (valor == 4) {
+                foto.className = 'classe4'
+            }
+            if (valor == 5) {
+                foto.className = 'classe5'
+            }
+            if (valor == 6) {
+                foto.className = 'classe6'
+            }
+
+            var valor2 = Math.floor((Math.random() * 6) + 1);
+            var foto2 = document.getElementById('div2')
+            if (valor2 == 1) {
+                foto2.className = 'classe1'
+            }
+            if (valor2 == 2) {
+                foto2.className = 'classe2'
+            }
+            if (valor2 == 3) {
+                foto2.className = 'classe3'
+            }
+            if (valor2 == 4) {
+                foto2.className = 'classe4'
+            }
+            if (valor2 == 5) {
+                foto2.className = 'classe5'
+            }
+            if (valor2 == 6) {
+                foto2.className = 'classe6'
+            }
+        }
+
+        function funcao3() {
+            var valor = Math.floor((Math.random() * 6) + 1);
+            var foto = document.getElementById('div1')
+            if (valor == 1) {
+                foto.className = 'classe1'
+            }
+            if (valor == 2) {
+                foto.className = 'classe2'
+            }
+            if (valor == 3) {
+                foto.className = 'classe3'
+            }
+            if (valor == 4) {
+                foto.className = 'classe4'
+            }
+            if (valor == 5) {
+                foto.className = 'classe5'
+            }
+            if (valor == 6) {
+                foto.className = 'classe6'
+            }
+            var valor2 = Math.floor((Math.random() * 6) + 1);
+            var foto2 = document.getElementById('div2')
+            if (valor2 == 1) {
+                foto2.className = 'classe1'
+            }
+            if (valor2 == 2) {
+                foto2.className = 'classe2'
+            }
+            if (valor2 == 3) {
+                foto2.className = 'classe3'
+            }
+            if (valor2 == 4) {
+                foto2.className = 'classe4'
+            }
+            if (valor2 == 5) {
+                foto2.className = 'classe5'
+            }
+            if (valor2 == 6) {
+                foto2.className = 'classe6'
+            }
+            var valor3 = Math.floor((Math.random() * 6) + 1);
+            var foto3 = document.getElementById('div3')
+            if (valor3 == 1) {
+                foto3.className = 'classe1'
+            }
+            if (valor3 == 2) {
+                foto3.className = 'classe2'
+            }
+            if (valor3 == 3) {
+                foto3.className = 'classe3'
+            }
+            if (valor3 == 4) {
+                foto3.className = 'classe4'
+            }
+            if (valor3 == 5) {
+                foto3.className = 'classe5'
+            }
+            if (valor3 == 6) {
+                foto3.className = 'classe6'
+            }
+        }                      
+    </script>
+</body>
+
+</html>
